@@ -3,7 +3,8 @@
 
 from UtSession import UtSession
 
-session = UtSession("ssh_config.json", "test_script.json", "notify.json")
+json_input = ["ssh_config.json", "test_script.json", "notify.json"]
+session = UtSession(*json_input)
 session.prepare()
 session.go()
 session.send_notify()
